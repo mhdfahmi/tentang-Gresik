@@ -1,0 +1,243 @@
+/* === GLOBAL RESET === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* === HEADER === */
+header {
+  background-color: #fbc02d;
+  padding: 30px 20px 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.header-content h1 {
+  font-size: 2.8em;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.header-content p {
+  font-size: 1.2em;
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+nav {
+  margin-top: 20px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  font-size: 1.05em;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #444;
+}
+
+/* === UMUM UNTUK SEMUA SECTION === */
+.section-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 50px 20px;
+  background-color: #fff;
+  max-width: 1000px;
+  margin: 40px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  animation: fadeSlide 1.2s ease;
+}
+
+.left {
+  flex: 1;
+  min-width: 300px;
+}
+
+.left h2 {
+  font-size: 2em;
+  color: #fbc02d;
+  margin-bottom: 15px;
+}
+
+.left p {
+  margin-bottom: 15px;
+  text-align: justify;
+  font-size: 1.05em;
+  color: #333;
+}
+
+.img-section {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
+/* === TENTANG BAGIAN KANAN === */
+.right {
+  flex: 1;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  min-width: 250px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.right h3 {
+  color: #d32f2f;
+  font-size: 1.5em;
+}
+
+.right em {
+  font-size: 0.9em;
+  color: #555;
+}
+
+.lambang {
+  max-width: 140px;
+  margin: 15px 0;
+}
+
+.label {
+  font-size: 0.85em;
+  color: #777;
+}
+
+.info h4 {
+  color: #f57f17;
+  margin: 15px 0 10px;
+}
+
+.info p {
+  font-size: 0.95em;
+  text-align: left;
+  color: #333;
+}
+.wisata-item {
+  margin-bottom: 40px;
+  animation: fadeSlide 1s ease forwards;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.wisata-item h3 {
+  margin-bottom: 10px;
+  color: #f57f17;
+}
+
+.wisata-item p {
+  color: #333;
+  text-align: justify;
+  font-size: 1.05em;
+}
+
+.wisata-img {
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-bottom: 15px;
+}
+.kuliner-item {
+  margin-bottom: 40px;
+  animation: fadeSlide 1s ease forwards;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.kuliner-item h3 {
+  margin-bottom: 10px;
+  color: #388e3c;
+}
+
+.kuliner-item p {
+  color: #333;
+  text-align: justify;
+  font-size: 1.05em;
+}
+
+.kuliner-img {
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-bottom: 15px;
+}
+
+
+/* Tambahan animasi untuk hidupkan tiap item saat scroll */
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* === ANIMASI HALUS === */
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .section-container {
+    flex-direction: column;
+  }
+
+  .right {
+    margin-top: 20px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .header-content h1 {
+    font-size: 2.2em;
+  }
+
+  .header-content p {
+    font-size: 1em;
+  }
+}
